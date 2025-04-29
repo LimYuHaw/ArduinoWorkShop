@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 對話網頁 (Google Gemini)</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; margin: 0; }
+    .container { max-width: 480px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 16px #0001; padding: 24px; }
+    h2 { text-align: center; color: #333; }
+    #chatBox { height: 320px; overflow-y: auto; border: 1px solid #ddd; border-radius: 6px; padding: 12px; background: #fafbfc; margin-bottom: 16px; }
+    .msg { margin: 8px 0; padding: 8px 12px; border-radius: 6px; max-width: 80%; word-break: break-all; }
+    .user { background: #e3f2fd; align-self: flex-end; margin-left: auto; }
+    .ai { background: #f1f8e9; color: #333; align-self: flex-start; margin-right: auto; }
+    #chatBox { display: flex; flex-direction: column; }
+    #chatForm { display: flex; gap: 8px; }
+    #userInput { flex: 1; padding: 8px; border-radius: 4px; border: 1px solid #bbb; }
+    #apiKey { width: 100%; margin-bottom: 12px; padding: 8px; border-radius: 4px; border: 1px solid #bbb; }
+    button { padding: 8px 18px; border: none; border-radius: 4px; background: #1976d2; color: #fff; font-weight: bold; cursor: pointer; }
+    button:hover { background: #1565c0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>AI 對話 (Google Gemini)</h2>
+    <input id="apiKey" type="password" placeholder="請輸入 Google AI API Key" autocomplete="off" />
+    <div id="chatBox"></div>
+    <form id="chatForm" autocomplete="off">
+      <input id="userInput" type="text" placeholder="輸入訊息..." autocomplete="off" />
+      <button type="submit">送出</button>
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
